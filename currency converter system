@@ -1,0 +1,40 @@
+def display_menu(self):
+        print("\nCurrency Converter Menu:")
+        print("1. USD to ZAR")
+        print("2. ZAR to USD")
+        print("3. Exit")
+
+    def usd_to_zar_converter(self):
+        try:
+            amount = float(input("Enter amount in USD: $"))
+            result = amount * self.usd_to_zar
+            print(f"${amount} USD is equal to R{result:.2f} ZAR")
+        except ValueError:
+            print("Error: Invalid input. Please enter a number.")
+def zar_to_usd_converter(self):
+        try:
+            amount = float(input("Enter amount in ZAR: R"))
+            result = amount * self.zar_to_usd
+            print(f"R{amount} ZAR is equal to ${result:.2f} USD")
+        except ValueError:
+            print("Error: Invalid input. Please enter a number.")
+
+    def run(self):
+        while True:
+            self.display_menu()
+            choice = input("Enter your choice: ")
+            if choice == "1":
+                self.usd_to_zar_converter()
+            elif choice == "2":
+                self.zar_to_usd_converter()
+            elif choice == "3":
+                print("Goodbye!")
+                break
+            else:
+                print("Invalid choice. Please try again.")
+
+def main():
+    converter = CurrencyConverter()
+    converter.run()
+if _name_ == "_main_":
+    main()
